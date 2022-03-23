@@ -10,7 +10,7 @@ const envSchema = joi
   .keys({
     NODE_ENV: joi.string().valid('development', 'production').required(),
     PORT: joi.number().positive().required(),
-    //ORIGIN: joi.string().uri().required(),
+    ORIGIN: joi.string().uri().required(),
   })
   .unknown()
 
@@ -22,5 +22,4 @@ if (error) {
   logger.log.error(new Error(`Config validation error: ${error.message}`))
 }
 
-//export default { nodeEnv: env.NODE_ENV, port: env.PORT, origin: env.ORIGIN }
-export default env
+export default { nodeEnv: env.NODE_ENV, port: env.PORT, origin: env.ORIGIN }
