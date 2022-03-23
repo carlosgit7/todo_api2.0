@@ -5,7 +5,6 @@ import cors from 'cors'
 import config from './utils/config'
 import logger from './utils/logger'
 import errors from './utils/errors'
-// import res from 'express/lib/response'
 
 import router from './routes'
 
