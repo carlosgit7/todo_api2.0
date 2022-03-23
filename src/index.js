@@ -1,11 +1,13 @@
+import './utils/config'
+
 import express from 'express'
 
 const app = express()
 
-const port = 3000
+const port = process.env.PORT
 
 app.get('/', (req, res) => {
-  res.send({ msg: 'hello there' })
+  res.send({ msg: 'Hello Wolrd!!' })
 })
 
 app.listen(port)
